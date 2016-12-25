@@ -70,7 +70,7 @@ public class DivideByNumber {
         try{
             int sum=0;
            sum=sumOfDigit(number);
-            int divisor=sum/3;
+            int divisor=sum%3;
             if(divisor==0){
                 isDivideByThree=true;
             }
@@ -90,7 +90,7 @@ public class DivideByNumber {
             String lastTwoDigit=numberInText.substring(numberInText.length()-2,numberInText.length());
             Log.i(TAG, "divideByFour: Last Two Digit="+lastTwoDigit);
             int digit=Integer.parseInt(lastTwoDigit);
-            if(digit/4==0){
+            if(digit%4==0){
                 isDivideByFour=true;
             }
 
@@ -139,7 +139,7 @@ public class DivideByNumber {
             String valueOfNumber=String.valueOf(number);
             String lastThreeDigit=valueOfNumber.substring(valueOfNumber.length()-3,valueOfNumber.length());
             int   divisor=Integer.parseInt(lastThreeDigit);
-            int  afterDivisionNumber=divisor/8;
+            int  afterDivisionNumber=divisor%8;
             if(afterDivisionNumber==0){
               isDividedByEight=true;
             }
@@ -154,7 +154,7 @@ public class DivideByNumber {
         boolean isDivideByNine=false;
         try{
          int sum=sumOfDigit(number);
-            int divisor=sum/9;
+            int divisor=sum%9;
             if(divisor==0){
                 isDivideByNine=true;
             }
